@@ -2,9 +2,20 @@
   "manifest_version": 2,
 
   "name": "解除右鍵鎖",
-  "description": "This extension shows a Google Image search result for the current page",
+  "description": "點擊後解除右鍵鎖的限制",
   "version": "1.0",
-
+  "commands" : {
+    "reload_extension" : {
+      "suggested_key" : {
+        "default" : "Ctrl+Shift+K",
+        "windows" : "Ctrl+Shift+K",
+        "mac" : "MacCtrl+Shift+K",
+        "chromeos" : "Ctrl+Shift+K",
+        "linux" : "Ctrl+Shift+K"
+      },
+      "description" : "shortcut for reloading extensions"
+    }
+  },
   "browser_action": {
     "default_icon": "mouse_blue.png",
     "default_title": "解除右鍵鎖 !"
@@ -15,15 +26,5 @@
   ],
   "background": {
     "scripts": ["background.js"]
-  },
-  "content_scripts": [
-    {
-      "js": ["jquery-2.1.3.min.js","content.js"],
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "run_at": "document_end"         // pay attention to this line
-    }
-  ]
+  }
 }
