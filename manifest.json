@@ -16,14 +16,12 @@
       "description" : "shortcut for reloading extensions"
     }
   },
-  "browser_action": {
-    // "default_icon": "mouse_blue.png",
+  "browser_action": {    
     "default_icon": "mouse_default.png",
     "default_title": "解除右鍵鎖 !"
   },
   "permissions": [
     "activeTab"
-    // "https://ajax.googleapis.com/"
   ],
   "background": {
     "scripts": ["background.js"]

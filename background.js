@@ -4,7 +4,7 @@
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.browserAction.setIcon({
-        path: "mouse_pink.png",
+        path: "mouse_green.png",
         tabId: tab.id
     });
     chrome.tabs.executeScript(null, {file: "unlock.js"});      
